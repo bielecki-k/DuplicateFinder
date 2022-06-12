@@ -11,6 +11,7 @@ public class Main {
     static CommonFileUtils utils = new CommonFileUtils();
 
     public static void main(String[] args) throws IOException, URISyntaxException {
+       //todo filtrowanie by: nazwa, creation date, typ, rozmiar
 
 
 //        System.out.println("File:" + pathToFile + " is readable: " + utils.checkIfFileIsReadable(pathToFile));
@@ -19,17 +20,18 @@ public class Main {
 
         String directory2 = "C:/tmp";
         utils.readAttributes(directory2);
+        utils.getCreationDate(pathToFile);
 
 
 
 
 
-        try {
-            readUsingTraditionalWay();
-            readUsingIOUtils();
-        } catch(IOException e) {
-            System.out.println(e.getMessage());
-        }
+//        try {
+//            readUsingTraditionalWay();
+//            readUsingIOUtils();
+//        } catch(IOException e) {
+//            System.out.println(e.getMessage());
+//        }
     }
 
     public static void readUsingTraditionalWay() throws IOException {
